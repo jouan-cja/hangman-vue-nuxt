@@ -1,12 +1,45 @@
 <template>
   <section class="container">
     <QuizBoard />
-    <AlphabetBoard />
+    <AlphabetBoard :alphabet="alphabet" />
   </section>
 </template>
 
 <script>
-export default {}
+export default {
+  data () {
+    return {
+      alphabet: {
+        A: false,
+        B: false,
+        C: false,
+        D: false,
+        E: false,
+        F: false,
+        G: false,
+        H: false,
+        I: false,
+        J: false,
+        K: false,
+        L: false,
+        M: false,
+        N: false,
+        O: false,
+        P: false,
+        Q: false,
+        R: false,
+        S: false,
+        T: false,
+        U: false,
+        V: false,
+        W: false,
+        X: false,
+        Y: false,
+        Z: false
+      }
+    }
+  }
+}
 </script>
 
 <style lang="scss">

@@ -1,5 +1,5 @@
 <template>
-  <button class="letter" :class="{disabled}">
+  <button class="letter" :class="{disabled}" @click="$emit('handleClick', letter)">
     {{ letter }}
   </button>
 </template>
