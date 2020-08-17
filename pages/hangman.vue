@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <QuizBoard />
+    <QuizBoard :word="word" :alphabet="alphabet" />
     <AlphabetBoard :alphabet="alphabet" />
   </section>
 </template>
@@ -9,7 +9,56 @@
 export default {
   data () {
     return {
+      word: '',
+      words: [
+        'APPLE',
+        'BANANA',
+        'ORANGE',
+        'AVOCADO',
+        'BLACKBERRIES',
+        'PEAR'
+      ],
       alphabet: {
+        A: false,
+        B: false,
+        C: false,
+        D: false,
+        E: false,
+        F: false,
+        G: false,
+        H: false,
+        I: false,
+        J: false,
+        K: false,
+        L: false,
+        M: false,
+        N: false,
+        O: false,
+        P: false,
+        Q: false,
+        R: false,
+        S: false,
+        T: false,
+        U: false,
+        V: false,
+        W: false,
+        X: false,
+        Y: false,
+        Z: false
+      }
+    }
+  },
+  created () {
+    this.randomNewWord(this.words)
+  },
+  methods: {
+    getRandomInt (max) {
+      return Math.floor(Math.random() * Math.floor(max))
+    },
+    randomNewWord (words) {
+      const random = this.getRandomInt(words.length)
+      this.word = words[random]
+      this.alphabet = {
         A: false,
         B: false,
         C: false,
