@@ -5,7 +5,7 @@
       :key="letter"
       :letter="letter"
       :disabled="status"
-      @handleClick="disableClick"
+      @handleClick="disableclick"
     />
   </div>
 </template>
@@ -16,11 +16,10 @@ export default {
     alphabet: {
       type: Object,
       default: () => {}
-    }
-  },
-  methods: {
-    disableClick (letter) {
-      this.alphabet.[letter] = true
+    },
+    disableclick: {
+      type: Function,
+      default: () => {}
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <QuizBoard :word="word" :alphabet="alphabet" />
-    <AlphabetBoard :alphabet="alphabet" />
+    <AlphabetBoard :alphabet="alphabet" :disableclick="disableClick" />
   </section>
 </template>
 
@@ -86,12 +86,19 @@ export default {
         Y: false,
         Z: false
       }
+    },
+    disableClick (letter) {
+      this.alphabet.[letter] = true
     }
   }
 }
 </script>
 
 <style lang="scss">
+body {
+  font: 20px "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
+  margin: 20px;
+}
 .container {
   margin: 0 auto;
   min-height: 100vh;
