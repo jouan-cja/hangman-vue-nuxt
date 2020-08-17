@@ -1,10 +1,12 @@
 <template>
-  <button
-    class="next-btn"
-    @click="$emit('handleClick', words)"
-  >
-    Next
-  </button>
+  <b-row class="justify-content-center">
+    <button
+      class="next-btn"
+      @click="$emit('handleClick', words)"
+    >
+      Next
+    </button>
+  </b-row>
 </template>
 
 <script>
@@ -23,7 +25,7 @@ export default {
   margin-bottom: 20px;
   height: 25px;
   width: 100px;
-  font-size: 15px;
+  font: 15px "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
   background-color: #ef959d;
   border-color: #ef959d;
   border-radius: 5%;

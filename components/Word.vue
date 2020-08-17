@@ -1,5 +1,5 @@
 <template>
-  <button class="answer" :class="{show}">
+  <button class="answer m-1" :class="{show}">
     {{ word }}
   </button>
 </template>
@@ -21,14 +21,11 @@ export default {
 
 <style lang="scss">
   .answer {
-    height: 60px;
-    width: 60px;
-    font-size: 30px;
-    background-color: #F7F7F2;
-    font-weight: bold;
-    margin: 5px;
-    text-align: center;
+    height: 50px;
+    width: 45px;
+    font: bold 30px "Century Gothic", Futura, sans-serif;
     pointer-events: none;
+    background-color: #F7F7F2;
     color: #F7F7F2;
 
     &.show {

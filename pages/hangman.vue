@@ -1,9 +1,9 @@
 <template>
-  <section class="container">
+  <b-container fluid class="mt-5">
     <QuizBoard :word="word" :alphabet="alphabet" />
     <NextButton v-if="isFinished" :words="words" @handleClick="randomNewWord" />
     <AlphabetBoard :alphabet="alphabet" :disableclick="disableClick" />
-  </section>
+  </b-container>
 </template>
 
 <script>
@@ -109,18 +109,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-  body {
-    font: 20px "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
-    margin: 20px;
-  }
-  .container {
-    margin: 0 auto;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    text-align: -webkit-center;
-  }
-</style>

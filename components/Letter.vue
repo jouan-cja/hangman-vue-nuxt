@@ -23,7 +23,7 @@ export default {
   .letter {
     height: 45px;
     width: 45px;
-    font-size: 30px;
+    font: 30px "Century Gothic", Futura, sans-serif;
     background-color: #82c0cc;
     color: white;
     border-radius: 50%;

@@ -1,14 +1,16 @@
 <template>
-  <div class="quiz-board">
+  <b-row class="justify-content-md-center p-3">
     <client-only placeholder="Loading...">
-      <Word
-        v-for="(letter, key) in word"
-        :key="key"
-        :word="letter"
-        :show="isLetterClicked(letter)"
-      />
+      <b-col cols="12" md="auto">
+        <Word
+          v-for="(letter, key) in word"
+          :key="key"
+          :word="letter"
+          :show="isLetterClicked(letter)"
+        />
+      </b-col>
     </client-only>
-  </div>
+  </b-row>
 </template>
 
 <script>
@@ -30,11 +32,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-  .quiz-board {
-    font: 20px "Century Gothic", Futura, sans-serif;
-    padding: 30px;
-    text-align:center;
-  }
-</style>
